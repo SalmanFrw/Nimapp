@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Client Detail{% endblock %}</title>
+</head>
+<body>
+    <h2>{% block heading %}Client Detail{% endblock %}</h2>
+    <p><strong>Client Name:</strong> {{ client.client_name }}</p>
+    <p><strong>Created By:</strong> {{ client.created_by }}</p>
+    <p><strong>Created At:</strong> {{ client.created_at }}</p>
+    <p><strong>Updated At:</strong> {{ client.updated_at }}</p>
+    <!-- Add more details as needed -->
+</body>
+</html>

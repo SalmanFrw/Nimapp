@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Client List{% endblock %}</title>
+</head>
+<body>
+    <h2>{% block heading %}Client List{% endblock %}</h2>
+    <ul>
+        {% for client in clients %}
+        <li>
+            <a href="{% url 'client_detail' client.id %}">{{ client.client_name }}</a>
+            <ul>
+                <li><a href="{% url 'client_update' client.id %}">Update</a></li>
+                <li><a href="{% url 'client_delete' client.id %}">Delete</a></li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

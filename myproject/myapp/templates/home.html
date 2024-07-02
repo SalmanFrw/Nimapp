@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nimapp Infotech</h1>
+        <ul>
+            <li>
+                <h3>Client</h3>
+                <ul>
+                    <li><a href="{% url 'client-list' %}">View Clients</a></li>
+                    <li><a href="{% url 'client_form' %}">Add Client</a></li>
+                  
+
+            <li>
+                <h3>Project</h3>
+                <ul>
+                    <li><a href="{% url 'project-list' %}">View Projects</a></li>
+                    <li><a href="{% url 'project-form' %}">Add Project</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <h3>User</h3>
+                <ul>
+                    <li><a href="{% url 'user-list' %}">View Users</a></li>
+                    <li><a href="{% url 'user-form' %}">Add User</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Project Detail{% endblock %}</title>
+</head>
+<body>
+    <h2>{% block heading %}Project Detail{% endblock %}</h2>
+    <p><strong>Project Name:</strong> {{ project.name }}</p>
+    <p><strong>Client:</strong> {{ project.client.client_name }}</p>
+    <p><strong>Created By:</strong> {{ project.created_by }}</p>
+    <p><strong>Created At:</strong> {{ project.created_at }}</p>
+    <!-- Add more details as needed -->
+</body>
+</html>
